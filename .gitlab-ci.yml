@@ -1,0 +1,19 @@
+image: node:12.15
+
+stages:
+  - deeps
+
+install:
+  stage: deeps
+  script:
+    - npm set _auth "$NPM_TOKEN"
+    - npm set email "$NPM_EMAIL"
+    - npm set always-auth true
+    - npm set unsafe-perm true
+    - npm ci
+  artifacts:
+    paths:
+      - node_modules/
+  only:
+    - master
+    - merge_requests
