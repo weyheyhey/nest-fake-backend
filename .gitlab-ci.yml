@@ -16,4 +16,3 @@ install:
       - node_modules/
   only:
     - master
-    - merge_requests
