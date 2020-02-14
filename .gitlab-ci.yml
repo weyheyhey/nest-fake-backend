@@ -34,6 +34,5 @@ deploy:
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - scp docker-compose.yaml node@95.217.3.180:~
     - ssh -o "BatchMode yes" node@95.217.3.180 "docker login -u gitlab -p $TOKEN $CI_REGISTRY && cd ~ && docker-compose pull && docker-compose up -d"
-  when: manual
   only:
     - master
