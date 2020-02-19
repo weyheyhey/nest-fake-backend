@@ -5,9 +5,10 @@ import { TransformInterceptor } from "./shared/interceptors";
 
 import { AppController } from "./app.controller";
 import { AccountModule } from "./account/account.module";
+import { FakeModule } from "./fake/fake.module";
 
 @Module({
-  imports: [AccountModule],
+  imports: [AccountModule, FakeModule],
   controllers: [AppController],
   providers: [
     {
