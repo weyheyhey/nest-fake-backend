@@ -1,1 +1,2 @@
-export * from "./register-account.dto";
+export * from "./register.dto";
+export * from "./auth-by-phone.dto";

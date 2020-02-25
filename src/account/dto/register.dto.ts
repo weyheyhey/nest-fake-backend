@@ -3,7 +3,7 @@ import { IsNotEmpty } from "class-validator";
 
 import { DoesMatch } from "../../shared/validators";
 
-export class RegisterAccountDto {
+export class RegisterDto {
   @IsNotEmpty()
   @ApiProperty()
   readonly name: string;
